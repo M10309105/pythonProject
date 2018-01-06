@@ -8,7 +8,7 @@ def showStar(a):
 	spaceCount = a - 1
 	for i in range(0, starCount, 2):
 		printSpace(a)
-		printStar(i+1)
+		printStar(i+1)p.
 		a-=1
 
 
