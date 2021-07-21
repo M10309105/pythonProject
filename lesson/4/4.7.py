@@ -81,3 +81,81 @@ def foo731(name, **kwds):
 
 #foo731(100, name=50) # will error, got multiple values for argument 'name' 
 print(foo731(100, name1=50))
+
+
+print("=" * 100)
+print("4.7.4 Arbitrary Argument Lists")
+print("=" * 100)
+def foo74(file, sep, *arg):
+    print(file,"will write:",sep.join(arg))
+foo74("test file",'/','a','b','c')
+
+#better   #only key word argument can use after *arg
+def foo741(*arg,sep='/'):
+    print("will write:",sep.join(arg))
+foo741('a','b','c')
+foo741('a','b','c',sep='-')
+
+print("=" * 100)
+print("4.7.5 Unpacking Argument Lists")
+print("=" * 100)
+print(list(range(3,6)))
+l1 = [3,6]
+#if argiments save in list, you can use * operator to unpacking the augument
+print(list(range(*l1)))
+def foo475(*args):
+    print('argument:',','.join(args))
+argList=['apple','banana','cat']
+foo475(*argList)
+#same with dict,use ** operator to unpacking the augument
+def foo4751(*args):
+    print('argument:',','.join(args))
+dict1={'fname':'apple','cname':'banana','lname':'cat'}
+def foo4751(**argList):
+    for i in argList:
+        print("{}:{}".format(i,argList[i]))
+foo4751(**dict1)
+
+print("=" * 100)
+print("4.7.6  Lambda")
+print("=" * 100)
+#lambda return a function
+foo=lambda x,y : x + y
+print(foo(1,2))
+pairs = [(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four')]
+pairs.sort(key=lambda pair: pair[1])  #sort tuple[1], return touple[1] to sort function
+print(pairs)
+print((lambda a,b,c : a+b*c)(1,2,3))
+
+
+print("=" * 100)
+print("4.7.7  function document setting")
+print("=" * 100)
+def foo4771():
+    """This is document, need brief, end with'.'.
+
+    And second line need empty.
+    """
+    pass
+print(foo4771.__doc__)
+
+print("=" * 100)
+print("4.7.8  Function Annotations")
+print("=" * 100)
+def foo478(a1:str, a2:str='default')->str:
+    print("Annotations:",foo478.__annotations__)
+    return a1 + " and " + a2
+print(foo478('AAA'))
+print(foo478.__annotations__)
+
+print("=" * 100)
+print("4.8  coding style")
+print("=" * 100)
+print("using 4 space, not tab")
+print("don't over 79 characters per line")
+print("new line to sparater class or large block")
+print("put annotation in single line")
+print("add space between operator or (), but not inside=> a = f1(1 , 3) + f2(4 , 6)")
+print("same class naming format, use UpperCamelCase")
+print("use utf8 (default)")
+print("don't use non-ASCII character when naming")
