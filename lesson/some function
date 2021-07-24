@@ -1,0 +1,4 @@
+
+
+#change row column
+print(list(zip(*matrix)))
