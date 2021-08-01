@@ -2,3 +2,14 @@
 
 #change row column
 print(list(zip(*matrix)))
+
+#pad format
+print(f'{name:>10} ==> {phone:<10} ==> 123')
+print('This is apple'.rjust(30))
+print('This is apple'.ljust(30))
+print('This is apple'.center(30))
+print('This is apple'.zfill(30))
+
+serialization json to text fo file
+json.dump(x,f)
+json.load(f)
