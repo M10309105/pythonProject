@@ -2,5 +2,11 @@
 #
 #Exception
 print("=" * 100)
-print("8.2 Exceptionr")
+print("8.4 raise exception")
 print("=" * 100)
+
+try:
+    raise NameError("Test name")
+except Exception as e:
+    print(e)
+    raise
