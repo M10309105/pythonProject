@@ -24,3 +24,7 @@ os.system(cmd)
 import shutil
 shutil.copyfile(a,b)
 shutil.move(a,b)
+
+#argument process
+sys.argv
+argparse
