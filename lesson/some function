@@ -28,3 +28,14 @@ shutil.move(a,b)
 #argument process
 sys.argv
 argparse
+
+import math
+print(math.pi)
+print(math.pow(math.cos(1),2)+math.pow(math.sin(1),2))
+print(math.log(1024,2))
+
+#random
+import random
+print(random.choice([1,2,3,4,5]))
+print(random.random())
+print(random.randrange(10))
