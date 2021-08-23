@@ -39,3 +39,10 @@ import random
 print(random.choice([1,2,3,4,5]))
 print(random.random())
 print(random.randrange(10))
+
+#date
+from datetime import date
+now = date.today()
+d2 = date(1970,8,22)
+dd = now - d2
+print(dd.days)
