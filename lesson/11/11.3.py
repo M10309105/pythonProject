@@ -7,3 +7,6 @@ print("=" * 100)
 
 import struct
 #pack unpack
+
+with open('myfile.zip', 'rb') as f:
+    data = f.read()
